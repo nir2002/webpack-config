@@ -28,4 +28,7 @@ A set of webpack configuration files
     * open: auto open new tab with the server address.
     * hot: enables HMR (requires the HotModuleReplacement plugin.
   * nodeJS + express: serving our app using nodeJS+express in a way that everytime we run the server, webpackk will run too.
-    * webpack-middleware is being used and can handle many webpack options - for more info: https://github.com/webpack/webpack-dev-middleware .
+    * webpack-middleware is being used and can handle many webpack options - for more info: https://github.com/webpack/webpack-dev-middleware.
+
+## Optimizations
+  * image-webpack-loader: Minify PNG, JPEG, GIF, SVG and WEBP images with imagemin. 
