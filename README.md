@@ -18,4 +18,12 @@ A set of webpack configuration files
   * file-loader: resolves files imports.
 
 ## Server
-  * http-server: can server static files of the application.
+  * http-server: can serve static files of the application.
+  * webpack-dev-server: can serve static files of the application and watch them using webpack.
+    * contentBase: an array that mention from which paths to server content from.
+    * compress: Enable gzip compression for everything served.
+    * port: the dev-server port.
+    * disableHostCheck: host checking - recommend to leave false as host are vulnerable to DNS rebinding attacks.
+    * headers: set of custom headers.
+    * open: auto open new tab with the server address.
+    * hot: enables HMR (requires the HotModuleReplacement plugin.

@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
@@ -12,6 +13,8 @@ const htmlPlugin = new HtmlWebPackPlugin({
   template: path.join(APP_DIR, APP_HTML_TEMPLEATE),
   filename: "index.html"
 });
+
+const hmrPlugin = new webpack.HotModuleReplacementPlugin();
 
 module.exports = {
   entry: path.join(APP_DIR, APP_FILE_NAME),
@@ -44,5 +47,16 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlPlugin]
+  devServer: {
+    contentBase: [OUTPUT_PATH],
+    compress: true,
+    port: 9000,
+    disableHostCheck: false,
+    headers: {
+      "X-custom-header": "custom"
+    },
+    open: false,
+    hot: true
+  },
+  plugins: [htmlPlugin, hmrPlugin]
 }
