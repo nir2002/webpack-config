@@ -29,6 +29,10 @@ module.exports = {
           babelrc: false,
           presets: ["babel-preset-env", "stage-0"]
         }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
