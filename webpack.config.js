@@ -7,7 +7,7 @@ const APP_FILE_NAME = "app.js";
 const APP_HTML_TEMPLEATE = "index.html";
 const APP_HTML_FILENAME = "index.html";
 const OUTPUT_PATH = path.resolve(__dirname, './dist');
-const BUNDLE_FILENAME = 'app.bundle.js';
+const BUNDLE_FILENAME = '[name].js';
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: path.join(APP_DIR, APP_HTML_TEMPLEATE),
@@ -16,12 +16,30 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 const hmrPlugin = new webpack.HotModuleReplacementPlugin();
 
+const VENDOR_LIBS = ['some_vendor_library'];
+
 module.exports = {
-  entry: path.join(APP_DIR, APP_FILE_NAME),
+  entry: {
+    bundle: path.join(APP_DIR, APP_FILE_NAME),
+    vendors: VENDOR_LIBS
+  },
   output: {
     path: OUTPUT_PATH,
     filename: BUNDLE_FILENAME
   },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+        cacheGroups: {
+            vendors: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendors',
+                enforce: true,
+                chunks: 'all'
+            }
+        }
+    }
+},
   module: {
     rules: [
       {

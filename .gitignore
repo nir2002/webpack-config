@@ -1,11 +1,5 @@
 node_modules
 yarn-error.log
-/dist/app.bundle.js
-/dist/index.html
+dist
 .DS_Store
 src/.DS_Store
-/dist/*.jpg
-/dist/*.jpeg
-/dist/*.png
-/dist/*.svg
-/dist/*.gif
