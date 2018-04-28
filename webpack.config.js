@@ -7,7 +7,7 @@ const APP_FILE_NAME = "app.js";
 const APP_HTML_TEMPLEATE = "index.html";
 const APP_HTML_FILENAME = "index.html";
 const OUTPUT_PATH = path.resolve(__dirname, './dist');
-const BUNDLE_FILENAME = '[name].js';
+const BUNDLE_FILENAME = '[name].[hash].js';
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: path.join(APP_DIR, APP_HTML_TEMPLEATE),

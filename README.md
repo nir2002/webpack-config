@@ -31,4 +31,6 @@ A set of webpack configuration files
     * webpack-middleware is being used and can handle many webpack options - for more info: https://github.com/webpack/webpack-dev-middleware.
 
 ## Optimizations
-  * image-webpack-loader: Minify PNG, JPEG, GIF, SVG and WEBP images with imagemin. 
+  * image-webpack-loader: Minify PNG, JPEG, GIF, SVG and WEBP images with imagemin.
+  * splits chunks: support for splits chunks for vendors libraries.
+  * caching handling: update the output files with hash to handle caching better.
