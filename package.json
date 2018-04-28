@@ -4,11 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production",
+    "dev": "npm run clean && webpack --mode development --watch",
+    "build": "npm run clean && webpack --mode production",
     "http-server": "http-server dist/",
-    "dev-server": "webpack-dev-server --mode development",
-    "express-server": "node server.js"
+    "dev-server": "npm run clean && webpack-dev-server --mode development",
+    "express-server": "node server.js",
+    "clean": "rimraf dist"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -22,6 +23,7 @@
     "http-server": "^0.11.1",
     "image-webpack-loader": "^4.2.0",
     "node-sass": "^4.9.0",
+    "rimraf": "^2.6.2",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.6.0",
