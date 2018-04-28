@@ -13,5 +13,5 @@ A set of webpack configuration files
 
 ## Loaders
   * css-loader: resolves css files.
-  * style-loader: injects css content to 'style' tag in the 'head' element of the html
-
+  * style-loader: injects css content to 'style' tag in the 'head' element of the html.
+  * sass-loader: resolves sass files.
