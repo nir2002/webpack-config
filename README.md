@@ -34,3 +34,4 @@ A set of webpack configuration files
   * image-webpack-loader: Minify PNG, JPEG, GIF, SVG and WEBP images with imagemin.
   * splits chunks: support for splits chunks for vendors libraries.
   * caching handling: update the output files with hash to handle caching better.
+  * uglifyJson: plugin that minifes the code.

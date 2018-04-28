@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const APP_DIR = path.join(__dirname, 'src');
 const APP_FILE_NAME = "app.js";
@@ -9,12 +10,16 @@ const APP_HTML_FILENAME = "index.html";
 const OUTPUT_PATH = path.resolve(__dirname, './dist');
 const BUNDLE_FILENAME = '[name].[hash].js';
 
+
 const htmlPlugin = new HtmlWebPackPlugin({
   template: path.join(APP_DIR, APP_HTML_TEMPLEATE),
   filename: "index.html"
 });
 
 const hmrPlugin = new webpack.HotModuleReplacementPlugin();
+
+const uglifyjsPlugin = new UglifyJsPlugin();
+
 
 const VENDOR_LIBS = ['some_vendor_library'];
 
@@ -82,5 +87,5 @@ module.exports = {
     open: false,
     hot: true
   },
-  plugins: [htmlPlugin, hmrPlugin]
+  plugins: [htmlPlugin, hmrPlugin, uglifyjsPlugin]
 }
