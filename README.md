@@ -38,3 +38,4 @@ A set of webpack configuration files
 
 ## Deployment
   * NODE_ENV variable: set envoirment for development or production
+  * Git Hub Pages: a script to deploy a static application to github pages (requires 'gh-pages' branch)

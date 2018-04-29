@@ -9,7 +9,8 @@
     "http-server": "http-server dist/",
     "dev-server": "NODE_ENV=development && npm run clean && webpack-dev-server --mode development",
     "express-server": "node server.js",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "deploy-gh": "yarn build && git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
