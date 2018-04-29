@@ -35,3 +35,6 @@ A set of webpack configuration files
   * splits chunks: support for splits chunks for vendors libraries.
   * caching handling: update the output files with hash to handle caching better.
   * uglifyJson: plugin that minifes the code.
+
+## Deployment
+  * NODE_ENV variable: set envoirment for development or production
