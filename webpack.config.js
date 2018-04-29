@@ -20,6 +20,9 @@ const hmrPlugin = new webpack.HotModuleReplacementPlugin();
 
 const uglifyjsPlugin = new UglifyJsPlugin();
 
+const windowVariablePlugin = new webpack.DefinePlugin({
+  'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+})
 
 const VENDOR_LIBS = ['some_vendor_library'];
 
