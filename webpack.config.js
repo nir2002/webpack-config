@@ -24,7 +24,7 @@ const windowVariablePlugin = new webpack.DefinePlugin({
   'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
 })
 
-const VENDOR_LIBS = ['some_vendor_library'];
+const VENDOR_LIBS = ['react'];
 
 module.exports = {
   entry: {
@@ -56,7 +56,7 @@ module.exports = {
         loader: "babel-loader",
         options: {
           babelrc: false,
-          presets: ["babel-preset-env", "stage-0"]
+          presets: ["babel-preset-env", "react", "stage-0"]
         }
       },
       {

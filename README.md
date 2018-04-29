@@ -40,3 +40,9 @@ A set of webpack configuration files
   * NODE_ENV variable: set envoirment for development or production.
   * Git Hub Pages: deploys a static application to github pages (requires 'gh-pages' branch).
   * Amazon-s3 bucket: deploys a static application to amazone s3 bucket (requires s3-websites installed global).
+
+## React
+  * react and reactDOM packages have been installed
+  * babel preset for react and jsx compilation.
+  * react added to vendors list
+  * hello world example of react has added to app.js
