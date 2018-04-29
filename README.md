@@ -37,5 +37,6 @@ A set of webpack configuration files
   * uglifyJson: plugin that minifes the code.
 
 ## Deployment
-  * NODE_ENV variable: set envoirment for development or production
-  * Git Hub Pages: a script to deploy a static application to github pages (requires 'gh-pages' branch)
+  * NODE_ENV variable: set envoirment for development or production.
+  * Git Hub Pages: deploys a static application to github pages (requires 'gh-pages' branch).
+  * Amazon-s3 bucket: deploys a static application to amazone s3 bucket (requires s3-websites installed global).
